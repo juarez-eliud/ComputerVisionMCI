@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,9 +17,9 @@ namespace ComputerVisionMCI
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new Form1());
 
             string value = "mci_Techno";
 
@@ -69,12 +71,50 @@ namespace ComputerVisionMCI
 
             //-------
 
-            //byte[] bufEsc = BitConverter.GetBytes(814);
+            //byte[] bufEsc = BitConverter.GetBytes(28524);
             //byte[] bufEscExit = BitConverter.GetBytes(0);
 
             //Console.WriteLine(bufEsc);
             //Console.WriteLine(bufEscExit);
 
+            string fileName = "asdf.png";
+            FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://192.168.1.69/"+ fileName);
+            request.Method = WebRequestMethods.Ftp.DownloadFile;
+            request.Credentials = new NetworkCredential("eliud","b203284");
+            bool asf = false;
+            try
+            {
+                using (FtpWebResponse response = (FtpWebResponse)request.GetResponse())
+                using (Stream ftpStream = response.GetResponseStream())
+                using (Stream fileStream = File.Create(@"C:\Users\JuanC\Desktop\test\" + "abcdario.png"))
+                {
+                    ftpStream.CopyTo(fileStream);
+                    
+                    Console.WriteLine($"Download Complete, status {response.StatusDescription}");
+                    response.Close();
+                    asf = true;
+                }
+            }
+            catch (WebException ex)
+            {
+                FtpWebResponse response = (FtpWebResponse)ex.Response;
+                if (response.StatusCode == FtpStatusCode.ActionNotTakenFileUnavailable)
+                {
+                    Console.WriteLine("File not exist");
+                }
+            }
+            if (asf)
+            {
+                FtpWebRequest request2 = (FtpWebRequest)WebRequest.Create("ftp://192.168.1.69/" + fileName);
+                request2.Method = WebRequestMethods.Ftp.DeleteFile;
+              
+                request2.Credentials = new NetworkCredential("eliud", "b203284");
+                using (FtpWebResponse response2 = (FtpWebResponse)request2.GetResponse())
+                {
+                    Console.WriteLine(response2.StatusDescription);
+                    response2.Close();
+                }
+            }
 
 
 

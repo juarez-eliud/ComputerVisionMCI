@@ -10,3 +10,4 @@ C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\obj\Debug\Comput
 C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\bin\Debug\libnodave.net.dll
 C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\obj\Debug\ComputerVisionMCI.csproj.CopyComplete
 C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\obj\Debug\ComputerVisionMCI.Form1.resources
+C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\obj\Debug\ComputerVisionMCI.ImageData.resources
