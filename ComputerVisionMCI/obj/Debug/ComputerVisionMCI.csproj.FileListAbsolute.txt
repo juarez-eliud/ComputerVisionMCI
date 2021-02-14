@@ -11,3 +11,11 @@ C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\bin\Debug\libnod
 C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\obj\Debug\ComputerVisionMCI.csproj.CopyComplete
 C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\obj\Debug\ComputerVisionMCI.Form1.resources
 C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\obj\Debug\ComputerVisionMCI.ImageData.resources
+C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\bin\Debug\System.Security.AccessControl.dll
+C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\bin\Debug\System.Security.Permissions.dll
+C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\bin\Debug\System.Security.AccessControl.xml
+C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\bin\Debug\System.Security.Permissions.xml
+C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\bin\Debug\System.Security.Principal.Windows.xml

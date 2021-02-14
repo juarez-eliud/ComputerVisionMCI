@@ -37,21 +37,24 @@ namespace ComputerVisionMCI
             this.hostTxt = new System.Windows.Forms.TextBox();
             this.hostLbl = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.remoteSiteTxt = new System.Windows.Forms.TextBox();
+            this.sourceTxt = new System.Windows.Forms.TextBox();
             this.remoteSiteLbl = new System.Windows.Forms.Label();
-            this.localSiteTxt = new System.Windows.Forms.TextBox();
+            this.targetTxt = new System.Windows.Forms.TextBox();
             this.localSiteLbl = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.searchImageBtn = new System.Windows.Forms.Button();
             this.dataGridViewImages = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.activityTxt = new System.Windows.Forms.TextBox();
             this.imageSearchTxt = new System.Windows.Forms.TextBox();
             this.imageNameLbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.strFromPLCTxt = new System.Windows.Forms.TextBox();
             this.stringPLCLbl = new System.Windows.Forms.Label();
+            this.setFTPConfBtn = new System.Windows.Forms.Button();
+            this.portLbl = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -60,6 +63,9 @@ namespace ComputerVisionMCI
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.portLbl);
+            this.groupBox1.Controls.Add(this.setFTPConfBtn);
             this.groupBox1.Controls.Add(this.passwordTxt);
             this.groupBox1.Controls.Add(this.passwordLbl);
             this.groupBox1.Controls.Add(this.usernameTxt);
@@ -75,15 +81,15 @@ namespace ComputerVisionMCI
             // 
             // passwordTxt
             // 
-            this.passwordTxt.Location = new System.Drawing.Point(691, 32);
+            this.passwordTxt.Location = new System.Drawing.Point(553, 32);
             this.passwordTxt.Name = "passwordTxt";
-            this.passwordTxt.Size = new System.Drawing.Size(173, 22);
+            this.passwordTxt.Size = new System.Drawing.Size(122, 22);
             this.passwordTxt.TabIndex = 5;
             // 
             // passwordLbl
             // 
             this.passwordLbl.AutoSize = true;
-            this.passwordLbl.Location = new System.Drawing.Point(614, 33);
+            this.passwordLbl.Location = new System.Drawing.Point(476, 33);
             this.passwordLbl.Name = "passwordLbl";
             this.passwordLbl.Size = new System.Drawing.Size(73, 17);
             this.passwordLbl.TabIndex = 4;
@@ -91,15 +97,15 @@ namespace ComputerVisionMCI
             // 
             // usernameTxt
             // 
-            this.usernameTxt.Location = new System.Drawing.Point(413, 32);
+            this.usernameTxt.Location = new System.Drawing.Point(288, 32);
             this.usernameTxt.Name = "usernameTxt";
-            this.usernameTxt.Size = new System.Drawing.Size(172, 22);
+            this.usernameTxt.Size = new System.Drawing.Size(142, 22);
             this.usernameTxt.TabIndex = 4;
             // 
             // usernameLbl
             // 
             this.usernameLbl.AutoSize = true;
-            this.usernameLbl.Location = new System.Drawing.Point(331, 34);
+            this.usernameLbl.Location = new System.Drawing.Point(206, 34);
             this.usernameLbl.Name = "usernameLbl";
             this.usernameLbl.Size = new System.Drawing.Size(77, 17);
             this.usernameLbl.TabIndex = 3;
@@ -109,7 +115,7 @@ namespace ComputerVisionMCI
             // 
             this.hostTxt.Location = new System.Drawing.Point(64, 33);
             this.hostTxt.Name = "hostTxt";
-            this.hostTxt.Size = new System.Drawing.Size(237, 22);
+            this.hostTxt.Size = new System.Drawing.Size(122, 22);
             this.hostTxt.TabIndex = 2;
             // 
             // hostLbl
@@ -123,9 +129,9 @@ namespace ComputerVisionMCI
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.remoteSiteTxt);
+            this.groupBox2.Controls.Add(this.sourceTxt);
             this.groupBox2.Controls.Add(this.remoteSiteLbl);
-            this.groupBox2.Controls.Add(this.localSiteTxt);
+            this.groupBox2.Controls.Add(this.targetTxt);
             this.groupBox2.Controls.Add(this.localSiteLbl);
             this.groupBox2.Location = new System.Drawing.Point(12, 173);
             this.groupBox2.Name = "groupBox2";
@@ -134,49 +140,49 @@ namespace ComputerVisionMCI
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Paths";
             // 
-            // remoteSiteTxt
+            // sourceTxt
             // 
-            this.remoteSiteTxt.Location = new System.Drawing.Point(112, 31);
-            this.remoteSiteTxt.Name = "remoteSiteTxt";
-            this.remoteSiteTxt.Size = new System.Drawing.Size(318, 22);
-            this.remoteSiteTxt.TabIndex = 8;
+            this.sourceTxt.Location = new System.Drawing.Point(112, 31);
+            this.sourceTxt.Name = "sourceTxt";
+            this.sourceTxt.Size = new System.Drawing.Size(318, 22);
+            this.sourceTxt.TabIndex = 8;
             // 
             // remoteSiteLbl
             // 
             this.remoteSiteLbl.AutoSize = true;
             this.remoteSiteLbl.Location = new System.Drawing.Point(17, 33);
             this.remoteSiteLbl.Name = "remoteSiteLbl";
-            this.remoteSiteLbl.Size = new System.Drawing.Size(89, 17);
+            this.remoteSiteLbl.Size = new System.Drawing.Size(57, 17);
             this.remoteSiteLbl.TabIndex = 7;
-            this.remoteSiteLbl.Text = "Remote Site:";
+            this.remoteSiteLbl.Text = "Source:";
             // 
-            // localSiteTxt
+            // targetTxt
             // 
-            this.localSiteTxt.Location = new System.Drawing.Point(546, 31);
-            this.localSiteTxt.Name = "localSiteTxt";
-            this.localSiteTxt.Size = new System.Drawing.Size(318, 22);
-            this.localSiteTxt.TabIndex = 10;
+            this.targetTxt.Location = new System.Drawing.Point(546, 31);
+            this.targetTxt.Name = "targetTxt";
+            this.targetTxt.Size = new System.Drawing.Size(318, 22);
+            this.targetTxt.TabIndex = 10;
             // 
             // localSiteLbl
             // 
             this.localSiteLbl.AutoSize = true;
             this.localSiteLbl.Location = new System.Drawing.Point(468, 33);
             this.localSiteLbl.Name = "localSiteLbl";
-            this.localSiteLbl.Size = new System.Drawing.Size(74, 17);
+            this.localSiteLbl.Size = new System.Drawing.Size(54, 17);
             this.localSiteLbl.TabIndex = 9;
-            this.localSiteLbl.Text = "Local Site:";
+            this.localSiteLbl.Text = "Target:";
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.searchImageBtn);
             this.groupBox3.Controls.Add(this.dataGridViewImages);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.activityTxt);
             this.groupBox3.Controls.Add(this.imageSearchTxt);
             this.groupBox3.Controls.Add(this.imageNameLbl);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.strFromPLCTxt);
             this.groupBox3.Controls.Add(this.stringPLCLbl);
             this.groupBox3.Location = new System.Drawing.Point(12, 269);
             this.groupBox3.Name = "groupBox3";
@@ -220,13 +226,13 @@ namespace ComputerVisionMCI
             this.label3.TabIndex = 7;
             this.label3.Text = "Activity logs:";
             // 
-            // textBox3
+            // activityTxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(18, 141);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(412, 259);
-            this.textBox3.TabIndex = 6;
+            this.activityTxt.Location = new System.Drawing.Point(18, 141);
+            this.activityTxt.Multiline = true;
+            this.activityTxt.Name = "activityTxt";
+            this.activityTxt.Size = new System.Drawing.Size(412, 259);
+            this.activityTxt.TabIndex = 6;
             // 
             // imageSearchTxt
             // 
@@ -263,12 +269,12 @@ namespace ComputerVisionMCI
             this.label1.TabIndex = 2;
             this.label1.Text = "Connection status:";
             // 
-            // textBox1
+            // strFromPLCTxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(135, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(295, 22);
-            this.textBox1.TabIndex = 1;
+            this.strFromPLCTxt.Location = new System.Drawing.Point(135, 72);
+            this.strFromPLCTxt.Name = "strFromPLCTxt";
+            this.strFromPLCTxt.Size = new System.Drawing.Size(295, 22);
+            this.strFromPLCTxt.TabIndex = 1;
             // 
             // stringPLCLbl
             // 
@@ -278,6 +284,31 @@ namespace ComputerVisionMCI
             this.stringPLCLbl.Size = new System.Drawing.Size(111, 17);
             this.stringPLCLbl.TabIndex = 0;
             this.stringPLCLbl.Text = "String from PLC:";
+            // 
+            // setFTPConfBtn
+            // 
+            this.setFTPConfBtn.Location = new System.Drawing.Point(798, 28);
+            this.setFTPConfBtn.Name = "setFTPConfBtn";
+            this.setFTPConfBtn.Size = new System.Drawing.Size(75, 33);
+            this.setFTPConfBtn.TabIndex = 6;
+            this.setFTPConfBtn.Text = "Set";
+            this.setFTPConfBtn.UseVisualStyleBackColor = true;
+            // 
+            // portLbl
+            // 
+            this.portLbl.AutoSize = true;
+            this.portLbl.Location = new System.Drawing.Point(696, 36);
+            this.portLbl.Name = "portLbl";
+            this.portLbl.Size = new System.Drawing.Size(38, 17);
+            this.portLbl.TabIndex = 7;
+            this.portLbl.Text = "Port:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(741, 34);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(42, 22);
+            this.textBox1.TabIndex = 8;
             // 
             // Form1
             // 
@@ -311,21 +342,24 @@ namespace ComputerVisionMCI
         private System.Windows.Forms.TextBox hostTxt;
         private System.Windows.Forms.Label hostLbl;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox remoteSiteTxt;
+        private System.Windows.Forms.TextBox sourceTxt;
         private System.Windows.Forms.Label remoteSiteLbl;
-        private System.Windows.Forms.TextBox localSiteTxt;
+        private System.Windows.Forms.TextBox targetTxt;
         private System.Windows.Forms.Label localSiteLbl;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox strFromPLCTxt;
         private System.Windows.Forms.Label stringPLCLbl;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox imageSearchTxt;
         private System.Windows.Forms.Label imageNameLbl;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox activityTxt;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridViewImages;
         private System.Windows.Forms.Button searchImageBtn;
+        private System.Windows.Forms.Button setFTPConfBtn;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label portLbl;
     }
 }
 

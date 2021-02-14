@@ -13,12 +13,12 @@ namespace ComputerVisionMCI.Models
         public int Rack { get; set; }
         public int Slot { get; set; }
 
-        public ConnectionSettings(int p, string ip, int r, int s)
-        {
-            Port = p;
-            IP = ip;
-            Rack = r;
-            Slot = s;
-        }
+        //public ConnectionSettings(int p, string ip, int r, int s)
+        //{
+        //    Port = p;
+        //    IP = ip;
+        //    Rack = r;
+        //    Slot = s;
+        //}
     }
 }
