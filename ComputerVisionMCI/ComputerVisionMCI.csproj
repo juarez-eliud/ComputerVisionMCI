@@ -68,11 +68,14 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Models\FTP.cs" />
+    <Compile Include="Models\PathImages.cs" />
+    <Compile Include="Models\PLC.cs" />
+    <Compile Include="Tesla3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Tesla3.Designer.cs">
+      <DependentUpon>Tesla3.cs</DependentUpon>
     </Compile>
     <Compile Include="ImageData.cs">
       <SubType>Form</SubType>
@@ -80,12 +83,10 @@
     <Compile Include="ImageData.Designer.cs">
       <DependentUpon>ImageData.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\ConnectionSettings.cs" />
-    <Compile Include="PLC.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Tesla3.resx">
+      <DependentUpon>Tesla3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImageData.resx">
       <DependentUpon>ImageData.cs</DependentUpon>
@@ -98,6 +99,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -112,6 +114,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Assets\MCI-logo-50-blanco.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
