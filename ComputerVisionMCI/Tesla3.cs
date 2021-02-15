@@ -9,13 +9,15 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Threading;
 using System.Xml;
 
 namespace ComputerVisionMCI
 {
     public partial class Tesla3 : Form
-    {        
+    {
         PLC plcConf = new PLC();
         FTP ftpConf = new FTP();
         PathImages pathImgsConf = new PathImages();
@@ -25,19 +27,9 @@ namespace ComputerVisionMCI
         libnodave.daveConnection daveConnection;
         readonly int dataBlock = 1200;
 
-        public string status = "";    
-        
-                
         public Tesla3()
         {
-            
-            //FTP   
-            
-            //PATHS
-           
-
-            //Initiate();
-            InitializeComponent();         
+            InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -45,26 +37,43 @@ namespace ComputerVisionMCI
             GetPLCConfig();
             GetFTPConfig();
             GetPathsConfig();
+            passwordTxt.PasswordChar = '*';
         }
 
         public void Initiate()
         {
+
+          
+            statusLbl.Text = "Connecting...";
+            statusLbl.ForeColor = Color.DarkGray;
+
+            //Thread.Sleep(60000);
             if (ConnectPLC())
             {
-                statusLbl.Text = "Connected";
-                statusLbl.ForeColor = Color.Green;
-                Thread heartBeat = new Thread(HeartBeat);
-                heartBeat.Start();
+                
+                statusLbl.Invoke((Action)delegate
+                {
+                    statusLbl.Text = "Connected";
+                    statusLbl.ForeColor = Color.Green;
+                });
+                //Thread heartBeat = new Thread(HeartBeat);
+                //heartBeat.Start();
             }
             else
             {
-                statusLbl.Text = "Not Connected";
-                statusLbl.ForeColor = Color.Red;
-                Thread.Sleep(60000);
-                Initiate();
+                
+                statusLbl.Invoke((Action)delegate
+                {
+                    statusLbl.Text = "Unable to connect";
+                    statusLbl.ForeColor = Color.Red;
+                });
+                //Thread.Sleep(60000);
+                // Initiate();
             }
 
         }
+
+   
 
         public void HeartBeat()
         {
@@ -137,6 +146,7 @@ namespace ComputerVisionMCI
 
         public bool ConnectPLC()
         {
+            
             try
             {
                 daveSerial.rfd = libnodave.openSocket(plcConf.Port, plcConf.IP);
@@ -145,7 +155,7 @@ namespace ComputerVisionMCI
                 if (daveSerial.rfd > 0)
                 {
                     daveInterface = new libnodave.daveInterface(daveSerial, "", 0, libnodave.daveProtoISOTCP, libnodave.daveSpeed187k);
-                    daveInterface.setTimeout(1000000);
+                    //daveInterface.setTimeout(1000000);
                     if (0 == daveInterface.initAdapter())
                     {
                         daveConnection = new libnodave.daveConnection(daveInterface, 0, plcConf.Rack, plcConf.Slot);
@@ -522,6 +532,11 @@ namespace ComputerVisionMCI
         private void updatePathsConfBtn_Click(object sender, EventArgs e)
         {
             UpdatePathsConfig();
+        }
+
+        private void connectPLCBtn_Click(object sender, EventArgs e)
+        {
+            Initiate();
         }
     }
 }

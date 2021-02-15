@@ -48,6 +48,7 @@ namespace ComputerVisionMCI
             this.targetTxt = new System.Windows.Forms.TextBox();
             this.localSiteLbl = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.connectPLCBtn = new System.Windows.Forms.Button();
             this.searchImageBtn = new System.Windows.Forms.Button();
             this.dataGridViewImages = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
@@ -92,7 +93,7 @@ namespace ComputerVisionMCI
             this.ftpGbx.Location = new System.Drawing.Point(12, 185);
             this.ftpGbx.Name = "ftpGbx";
             this.ftpGbx.Size = new System.Drawing.Size(893, 72);
-            this.ftpGbx.TabIndex = 0;
+            this.ftpGbx.TabIndex = 2;
             this.ftpGbx.TabStop = false;
             this.ftpGbx.Text = "FTP";
             // 
@@ -101,7 +102,7 @@ namespace ComputerVisionMCI
             this.portFTPTxt.Location = new System.Drawing.Point(712, 27);
             this.portFTPTxt.Name = "portFTPTxt";
             this.portFTPTxt.Size = new System.Drawing.Size(60, 22);
-            this.portFTPTxt.TabIndex = 8;
+            this.portFTPTxt.TabIndex = 7;
             // 
             // portLbl
             // 
@@ -109,7 +110,7 @@ namespace ComputerVisionMCI
             this.portLbl.Location = new System.Drawing.Point(667, 32);
             this.portLbl.Name = "portLbl";
             this.portLbl.Size = new System.Drawing.Size(38, 17);
-            this.portLbl.TabIndex = 7;
+            this.portLbl.TabIndex = 6;
             this.portLbl.Text = "Port:";
             // 
             // updateFTPConfBtn
@@ -117,7 +118,7 @@ namespace ComputerVisionMCI
             this.updateFTPConfBtn.Location = new System.Drawing.Point(798, 24);
             this.updateFTPConfBtn.Name = "updateFTPConfBtn";
             this.updateFTPConfBtn.Size = new System.Drawing.Size(75, 33);
-            this.updateFTPConfBtn.TabIndex = 6;
+            this.updateFTPConfBtn.TabIndex = 0;
             this.updateFTPConfBtn.Text = "Update";
             this.updateFTPConfBtn.UseVisualStyleBackColor = true;
             this.updateFTPConfBtn.Click += new System.EventHandler(this.updateFTPConfBtn_Click);
@@ -143,7 +144,7 @@ namespace ComputerVisionMCI
             this.usernameTxt.Location = new System.Drawing.Point(257, 27);
             this.usernameTxt.Name = "usernameTxt";
             this.usernameTxt.Size = new System.Drawing.Size(142, 22);
-            this.usernameTxt.TabIndex = 4;
+            this.usernameTxt.TabIndex = 3;
             // 
             // usernameLbl
             // 
@@ -151,7 +152,7 @@ namespace ComputerVisionMCI
             this.usernameLbl.Location = new System.Drawing.Point(209, 30);
             this.usernameLbl.Name = "usernameLbl";
             this.usernameLbl.Size = new System.Drawing.Size(42, 17);
-            this.usernameLbl.TabIndex = 3;
+            this.usernameLbl.TabIndex = 2;
             this.usernameLbl.Text = "User:";
             // 
             // hostTxt
@@ -159,7 +160,7 @@ namespace ComputerVisionMCI
             this.hostTxt.Location = new System.Drawing.Point(64, 27);
             this.hostTxt.Name = "hostTxt";
             this.hostTxt.Size = new System.Drawing.Size(122, 22);
-            this.hostTxt.TabIndex = 2;
+            this.hostTxt.TabIndex = 1;
             // 
             // hostLbl
             // 
@@ -167,7 +168,7 @@ namespace ComputerVisionMCI
             this.hostLbl.Location = new System.Drawing.Point(18, 30);
             this.hostLbl.Name = "hostLbl";
             this.hostLbl.Size = new System.Drawing.Size(41, 17);
-            this.hostLbl.TabIndex = 1;
+            this.hostLbl.TabIndex = 0;
             this.hostLbl.Text = "Host:";
             // 
             // pathsGbx
@@ -182,7 +183,7 @@ namespace ComputerVisionMCI
             this.pathsGbx.Location = new System.Drawing.Point(12, 281);
             this.pathsGbx.Name = "pathsGbx";
             this.pathsGbx.Size = new System.Drawing.Size(893, 72);
-            this.pathsGbx.TabIndex = 6;
+            this.pathsGbx.TabIndex = 3;
             this.pathsGbx.TabStop = false;
             this.pathsGbx.Text = "Paths";
             // 
@@ -191,7 +192,7 @@ namespace ComputerVisionMCI
             this.defaultImgTxt.Location = new System.Drawing.Point(122, 26);
             this.defaultImgTxt.Name = "defaultImgTxt";
             this.defaultImgTxt.Size = new System.Drawing.Size(102, 22);
-            this.defaultImgTxt.TabIndex = 12;
+            this.defaultImgTxt.TabIndex = 1;
             // 
             // defaultImgLbl
             // 
@@ -199,7 +200,7 @@ namespace ComputerVisionMCI
             this.defaultImgLbl.Location = new System.Drawing.Point(17, 29);
             this.defaultImgLbl.Name = "defaultImgLbl";
             this.defaultImgLbl.Size = new System.Drawing.Size(99, 17);
-            this.defaultImgLbl.TabIndex = 11;
+            this.defaultImgLbl.TabIndex = 0;
             this.defaultImgLbl.Text = "Default image:";
             // 
             // updatePathsConfBtn
@@ -207,7 +208,7 @@ namespace ComputerVisionMCI
             this.updatePathsConfBtn.Location = new System.Drawing.Point(798, 20);
             this.updatePathsConfBtn.Name = "updatePathsConfBtn";
             this.updatePathsConfBtn.Size = new System.Drawing.Size(75, 33);
-            this.updatePathsConfBtn.TabIndex = 9;
+            this.updatePathsConfBtn.TabIndex = 6;
             this.updatePathsConfBtn.Text = "Update";
             this.updatePathsConfBtn.UseVisualStyleBackColor = true;
             this.updatePathsConfBtn.Click += new System.EventHandler(this.updatePathsConfBtn_Click);
@@ -217,7 +218,7 @@ namespace ComputerVisionMCI
             this.sourceTxt.Location = new System.Drawing.Point(314, 26);
             this.sourceTxt.Name = "sourceTxt";
             this.sourceTxt.Size = new System.Drawing.Size(116, 22);
-            this.sourceTxt.TabIndex = 8;
+            this.sourceTxt.TabIndex = 3;
             // 
             // remoteSiteLbl
             // 
@@ -225,7 +226,7 @@ namespace ComputerVisionMCI
             this.remoteSiteLbl.Location = new System.Drawing.Point(251, 31);
             this.remoteSiteLbl.Name = "remoteSiteLbl";
             this.remoteSiteLbl.Size = new System.Drawing.Size(57, 17);
-            this.remoteSiteLbl.TabIndex = 7;
+            this.remoteSiteLbl.TabIndex = 2;
             this.remoteSiteLbl.Text = "Source:";
             // 
             // targetTxt
@@ -233,7 +234,7 @@ namespace ComputerVisionMCI
             this.targetTxt.Location = new System.Drawing.Point(526, 26);
             this.targetTxt.Name = "targetTxt";
             this.targetTxt.Size = new System.Drawing.Size(246, 22);
-            this.targetTxt.TabIndex = 10;
+            this.targetTxt.TabIndex = 5;
             // 
             // localSiteLbl
             // 
@@ -241,11 +242,12 @@ namespace ComputerVisionMCI
             this.localSiteLbl.Location = new System.Drawing.Point(467, 30);
             this.localSiteLbl.Name = "localSiteLbl";
             this.localSiteLbl.Size = new System.Drawing.Size(54, 17);
-            this.localSiteLbl.TabIndex = 9;
+            this.localSiteLbl.TabIndex = 4;
             this.localSiteLbl.Text = "Target:";
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.connectPLCBtn);
             this.groupBox3.Controls.Add(this.searchImageBtn);
             this.groupBox3.Controls.Add(this.dataGridViewImages);
             this.groupBox3.Controls.Add(this.label3);
@@ -259,16 +261,26 @@ namespace ComputerVisionMCI
             this.groupBox3.Location = new System.Drawing.Point(12, 372);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(893, 347);
-            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "PLC";
+            // 
+            // connectPLCBtn
+            // 
+            this.connectPLCBtn.Location = new System.Drawing.Point(22, 29);
+            this.connectPLCBtn.Name = "connectPLCBtn";
+            this.connectPLCBtn.Size = new System.Drawing.Size(75, 33);
+            this.connectPLCBtn.TabIndex = 10;
+            this.connectPLCBtn.Text = "Connect";
+            this.connectPLCBtn.UseVisualStyleBackColor = true;
+            this.connectPLCBtn.Click += new System.EventHandler(this.connectPLCBtn_Click);
             // 
             // searchImageBtn
             // 
             this.searchImageBtn.Location = new System.Drawing.Point(798, 29);
             this.searchImageBtn.Name = "searchImageBtn";
             this.searchImageBtn.Size = new System.Drawing.Size(75, 33);
-            this.searchImageBtn.TabIndex = 9;
+            this.searchImageBtn.TabIndex = 8;
             this.searchImageBtn.Text = "Search";
             this.searchImageBtn.UseVisualStyleBackColor = true;
             this.searchImageBtn.Click += new System.EventHandler(this.searchImageBtn_Click);
@@ -285,33 +297,33 @@ namespace ComputerVisionMCI
             this.dataGridViewImages.RowHeadersVisible = false;
             this.dataGridViewImages.RowHeadersWidth = 51;
             this.dataGridViewImages.RowTemplate.Height = 24;
-            this.dataGridViewImages.Size = new System.Drawing.Size(347, 242);
-            this.dataGridViewImages.TabIndex = 8;
+            this.dataGridViewImages.Size = new System.Drawing.Size(347, 245);
+            this.dataGridViewImages.TabIndex = 9;
             this.dataGridViewImages.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewImages_CellDoubleClick);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 106);
+            this.label3.Location = new System.Drawing.Point(21, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 17);
-            this.label3.TabIndex = 7;
+            this.label3.TabIndex = 4;
             this.label3.Text = "Activity logs:";
             // 
             // activityTxt
             // 
-            this.activityTxt.Location = new System.Drawing.Point(18, 137);
+            this.activityTxt.Location = new System.Drawing.Point(22, 140);
             this.activityTxt.Multiline = true;
             this.activityTxt.Name = "activityTxt";
-            this.activityTxt.Size = new System.Drawing.Size(467, 175);
-            this.activityTxt.TabIndex = 6;
+            this.activityTxt.Size = new System.Drawing.Size(463, 175);
+            this.activityTxt.TabIndex = 5;
             // 
             // imageSearchTxt
             // 
             this.imageSearchTxt.Location = new System.Drawing.Point(622, 34);
             this.imageSearchTxt.Name = "imageSearchTxt";
             this.imageSearchTxt.Size = new System.Drawing.Size(150, 22);
-            this.imageSearchTxt.TabIndex = 5;
+            this.imageSearchTxt.TabIndex = 7;
             // 
             // imageNameLbl
             // 
@@ -319,43 +331,43 @@ namespace ComputerVisionMCI
             this.imageNameLbl.Location = new System.Drawing.Point(525, 36);
             this.imageNameLbl.Name = "imageNameLbl";
             this.imageNameLbl.Size = new System.Drawing.Size(91, 17);
-            this.imageNameLbl.TabIndex = 4;
+            this.imageNameLbl.TabIndex = 6;
             this.imageNameLbl.Text = "Image Name:";
             // 
             // statusLbl
             // 
             this.statusLbl.AutoSize = true;
             this.statusLbl.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusLbl.Location = new System.Drawing.Point(73, 33);
+            this.statusLbl.Location = new System.Drawing.Point(187, 36);
             this.statusLbl.Name = "statusLbl";
-            this.statusLbl.Size = new System.Drawing.Size(51, 18);
-            this.statusLbl.TabIndex = 3;
-            this.statusLbl.Text = "status";
+            this.statusLbl.Size = new System.Drawing.Size(16, 18);
+            this.statusLbl.TabIndex = 1;
+            this.statusLbl.Text = "0";
             // 
             // connStatusLbl
             // 
             this.connStatusLbl.AutoSize = true;
-            this.connStatusLbl.Location = new System.Drawing.Point(18, 34);
+            this.connStatusLbl.Location = new System.Drawing.Point(133, 37);
             this.connStatusLbl.Name = "connStatusLbl";
             this.connStatusLbl.Size = new System.Drawing.Size(52, 17);
-            this.connStatusLbl.TabIndex = 2;
+            this.connStatusLbl.TabIndex = 0;
             this.connStatusLbl.Text = "Status:";
             // 
             // strFromPLCTxt
             // 
             this.strFromPLCTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.strFromPLCTxt.Location = new System.Drawing.Point(135, 68);
+            this.strFromPLCTxt.Location = new System.Drawing.Point(135, 71);
             this.strFromPLCTxt.Name = "strFromPLCTxt";
             this.strFromPLCTxt.Size = new System.Drawing.Size(350, 24);
-            this.strFromPLCTxt.TabIndex = 1;
+            this.strFromPLCTxt.TabIndex = 3;
             // 
             // stringPLCLbl
             // 
             this.stringPLCLbl.AutoSize = true;
-            this.stringPLCLbl.Location = new System.Drawing.Point(18, 70);
+            this.stringPLCLbl.Location = new System.Drawing.Point(18, 73);
             this.stringPLCLbl.Name = "stringPLCLbl";
             this.stringPLCLbl.Size = new System.Drawing.Size(111, 17);
-            this.stringPLCLbl.TabIndex = 0;
+            this.stringPLCLbl.TabIndex = 2;
             this.stringPLCLbl.Text = "String from PLC:";
             // 
             // mciLogoPbx
@@ -364,7 +376,7 @@ namespace ComputerVisionMCI
             this.mciLogoPbx.Location = new System.Drawing.Point(12, 12);
             this.mciLogoPbx.Name = "mciLogoPbx";
             this.mciLogoPbx.Size = new System.Drawing.Size(247, 66);
-            this.mciLogoPbx.TabIndex = 8;
+            this.mciLogoPbx.TabIndex = 0;
             this.mciLogoPbx.TabStop = false;
             // 
             // tesla3Lbl
@@ -374,7 +386,7 @@ namespace ComputerVisionMCI
             this.tesla3Lbl.Location = new System.Drawing.Point(282, 12);
             this.tesla3Lbl.Name = "tesla3Lbl";
             this.tesla3Lbl.Size = new System.Drawing.Size(177, 44);
-            this.tesla3Lbl.TabIndex = 9;
+            this.tesla3Lbl.TabIndex = 0;
             this.tesla3Lbl.Text = "TESLA 3";
             // 
             // plcGbx
@@ -391,7 +403,7 @@ namespace ComputerVisionMCI
             this.plcGbx.Location = new System.Drawing.Point(12, 91);
             this.plcGbx.Name = "plcGbx";
             this.plcGbx.Size = new System.Drawing.Size(893, 72);
-            this.plcGbx.TabIndex = 10;
+            this.plcGbx.TabIndex = 1;
             this.plcGbx.TabStop = false;
             this.plcGbx.Text = "PLC";
             // 
@@ -400,7 +412,7 @@ namespace ComputerVisionMCI
             this.updatePLCConfBtn.Location = new System.Drawing.Point(798, 20);
             this.updatePLCConfBtn.Name = "updatePLCConfBtn";
             this.updatePLCConfBtn.Size = new System.Drawing.Size(75, 33);
-            this.updatePLCConfBtn.TabIndex = 9;
+            this.updatePLCConfBtn.TabIndex = 8;
             this.updatePLCConfBtn.Text = "Update";
             this.updatePLCConfBtn.UseVisualStyleBackColor = true;
             this.updatePLCConfBtn.Click += new System.EventHandler(this.updatePLCConfBtn_Click);
@@ -541,6 +553,7 @@ namespace ComputerVisionMCI
         private System.Windows.Forms.Button updatePathsConfBtn;
         private System.Windows.Forms.TextBox defaultImgTxt;
         private System.Windows.Forms.Label defaultImgLbl;
+        private System.Windows.Forms.Button connectPLCBtn;
     }
 }
 
