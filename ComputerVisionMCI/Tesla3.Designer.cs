@@ -59,7 +59,6 @@ namespace ComputerVisionMCI
             this.connStatusLbl = new System.Windows.Forms.Label();
             this.strFromPLCTxt = new System.Windows.Forms.TextBox();
             this.stringPLCLbl = new System.Windows.Forms.Label();
-            this.mciLogoPbx = new System.Windows.Forms.PictureBox();
             this.tesla3Lbl = new System.Windows.Forms.Label();
             this.plcGbx = new System.Windows.Forms.GroupBox();
             this.updatePLCConfBtn = new System.Windows.Forms.Button();
@@ -71,12 +70,13 @@ namespace ComputerVisionMCI
             this.portPLCLbl = new System.Windows.Forms.Label();
             this.ipTxt = new System.Windows.Forms.TextBox();
             this.ipLbl = new System.Windows.Forms.Label();
+            this.mciLogoPbx = new System.Windows.Forms.PictureBox();
             this.ftpGbx.SuspendLayout();
             this.pathsGbx.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewImages)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mciLogoPbx)).BeginInit();
             this.plcGbx.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mciLogoPbx)).BeginInit();
             this.SuspendLayout();
             // 
             // ftpGbx
@@ -370,15 +370,6 @@ namespace ComputerVisionMCI
             this.stringPLCLbl.TabIndex = 2;
             this.stringPLCLbl.Text = "String from PLC:";
             // 
-            // mciLogoPbx
-            // 
-            this.mciLogoPbx.Image = global::ComputerVisionMCI.Properties.Resources.MCI_logo_50_blanco;
-            this.mciLogoPbx.Location = new System.Drawing.Point(12, 12);
-            this.mciLogoPbx.Name = "mciLogoPbx";
-            this.mciLogoPbx.Size = new System.Drawing.Size(247, 66);
-            this.mciLogoPbx.TabIndex = 0;
-            this.mciLogoPbx.TabStop = false;
-            // 
             // tesla3Lbl
             // 
             this.tesla3Lbl.AutoSize = true;
@@ -481,6 +472,16 @@ namespace ComputerVisionMCI
             this.ipLbl.TabIndex = 0;
             this.ipLbl.Text = "IP:";
             // 
+            // mciLogoPbx
+            // 
+            this.mciLogoPbx.Image = global::ComputerVisionMCI.Properties.Resources.mci2;
+            this.mciLogoPbx.Location = new System.Drawing.Point(12, 12);
+            this.mciLogoPbx.Name = "mciLogoPbx";
+            this.mciLogoPbx.Size = new System.Drawing.Size(247, 66);
+            this.mciLogoPbx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.mciLogoPbx.TabIndex = 0;
+            this.mciLogoPbx.TabStop = false;
+            // 
             // Tesla3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -502,9 +503,9 @@ namespace ComputerVisionMCI
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewImages)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mciLogoPbx)).EndInit();
             this.plcGbx.ResumeLayout(false);
             this.plcGbx.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mciLogoPbx)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

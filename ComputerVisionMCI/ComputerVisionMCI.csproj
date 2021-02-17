@@ -115,7 +115,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Assets\mci2.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Assets\MCI-logo-50-blanco.png" />
   </ItemGroup>

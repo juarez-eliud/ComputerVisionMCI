@@ -1,7 +1,6 @@
 C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\bin\Debug\ComputerVisionMCI.exe.config
 C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\bin\Debug\ComputerVisionMCI.exe
 C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\bin\Debug\ComputerVisionMCI.pdb
-C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\obj\Debug\ComputerVisionMCI.csprojAssemblyReference.cache
 C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\obj\Debug\ComputerVisionMCI.Properties.Resources.resources
 C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\obj\Debug\ComputerVisionMCI.csproj.GenerateResource.cache
 C:\Users\JuanC\source\repos\ComputerVisionMCI\ComputerVisionMCI\obj\Debug\ComputerVisionMCI.csproj.CoreCompileInputs.cache

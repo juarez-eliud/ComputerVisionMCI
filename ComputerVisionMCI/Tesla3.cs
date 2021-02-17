@@ -47,7 +47,6 @@ namespace ComputerVisionMCI
             statusLbl.Text = "Connecting...";
             statusLbl.ForeColor = Color.DarkGray;
 
-            //Thread.Sleep(60000);
             if (ConnectPLC())
             {
                 
@@ -56,8 +55,8 @@ namespace ComputerVisionMCI
                     statusLbl.Text = "Connected";
                     statusLbl.ForeColor = Color.Green;
                 });
-                //Thread heartBeat = new Thread(HeartBeat);
-                //heartBeat.Start();
+                Thread heartBeat = new Thread(HeartBeat);
+                heartBeat.Start();
             }
             else
             {
